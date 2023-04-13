@@ -22,5 +22,7 @@ $(VENV_ACTIVATE):
 install: venv
 	$(VENV_RUN); $(PIP_CMD) install -r requirements.txt
 
-plot:
-	echo "PLOT"
+plots:
+	$(VENV_RUN); python3 plots.py
+
+.PHONY: install plots
