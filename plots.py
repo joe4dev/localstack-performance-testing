@@ -24,6 +24,8 @@ data_mapping = {
     "v2_docker_cold": "localstack-2.0.1-lambda-v2/test_invoke_cold_start/2023-04-12T23-37-52_test_invoke_cold_start.csv",
     "v2_docker_cold_arm64": "localstack-2.0.1-lambda-v2/test_invoke_cold_start_arm64/2023-04-13T12-45-22_test_invoke_cold_start.csv",
     "v2_docker_warm_arm64": "localstack-2.0.1-lambda-v2/test_invoke_warm_start_arm64/2023-04-13T11-17-31_test_invoke_warm_start.csv",
+    "v2_host_cold_linux": "localstack-f61bb5b5-lambda-v2/test_invoke_cold_start_host_linux/2023-04-13T13-14-03_test_invoke_cold_start.csv",
+    "v2_host_cold_arm64": "localstack-f61bb5b5-lambda-v2/test_invoke_cold_start_host_arm64/2023-04-13T15-24-51_test_invoke_cold_start.csv",
 }
 
 dfs = []
@@ -42,10 +44,14 @@ p = (
     + theme(axis_text_x=element_text(rotation=90, hjust=1))
 )
 p.save(path=plots_path, filename=f"invoke_time.pdf")
+p
 
 # %% Summary Stats
 
 df_grouped = df.groupby('label')["time_seconds"].quantile([0, 0.5, 0.95, 0.99, 1]).reset_index()
 df_grouped
+
+# pip install tabulate
+# print(df_grouped.to_markdown())
 
 # %%
