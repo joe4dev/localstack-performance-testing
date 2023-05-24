@@ -19,13 +19,20 @@ data = Path("localstack-2.0.1-lambda-v2/test_invoke_warm_start_arm64/2023-04-13T
 plots_path = Path("plots")
 
 data_mapping = {
-    "v1_docker": "localstack-2.0.1-lambda-legacy/test_invoke_warm_start/2023-04-12T23-01-33_test_invoke_warm_start.csv",
-    "v2_docker_warm": "localstack-2.0.1-lambda-v2/test_invoke_warm_start/2023-04-12T22-56-16_test_invoke_warm_start.csv",
-    "v2_docker_cold": "localstack-2.0.1-lambda-v2/test_invoke_cold_start/2023-04-12T23-37-52_test_invoke_cold_start.csv",
-    "v2_docker_cold_arm64": "localstack-2.0.1-lambda-v2/test_invoke_cold_start_arm64/2023-04-13T12-45-22_test_invoke_cold_start.csv",
-    "v2_docker_warm_arm64": "localstack-2.0.1-lambda-v2/test_invoke_warm_start_arm64/2023-04-13T11-17-31_test_invoke_warm_start.csv",
-    "v2_host_cold_linux": "localstack-f61bb5b5-lambda-v2/test_invoke_cold_start_host_linux/2023-04-13T13-14-03_test_invoke_cold_start.csv",
-    "v2_host_cold_arm64": "localstack-f61bb5b5-lambda-v2/test_invoke_cold_start_host_arm64/2023-04-13T15-24-51_test_invoke_cold_start.csv",
+    "v1_docker_cold": "localstack-2.0.1-lambda-legacy/test_invoke_warm_start/2023-04-12T23-01-33_test_invoke_warm_start.csv",
+    # "v2_docker_warm": "localstack-2.0.1-lambda-v2/test_invoke_warm_start/2023-04-12T22-56-16_test_invoke_warm_start.csv",
+    # "v2_docker_cold": "localstack-2.0.1-lambda-v2/test_invoke_cold_start/2023-04-13T17-07-32_test_invoke_cold_start.csv",
+    # "v2_docker_cold_virtiofs": "localstack-2.0.1-lambda-v2/test_invoke_cold_start_virtiofs/2023-04-13T16-38-49_test_invoke_cold_start.csv",
+    # "v2_docker_cold_linux": "localstack-2.0.1-lambda-v2/test_invoke_cold_start_linux/2023-04-14T14-14-31_test_invoke_cold_start.csv",
+    # "v2_docker_cold_arm64": "localstack-2.0.1-lambda-v2/test_invoke_cold_start_arm64/2023-04-13T12-45-22_test_invoke_cold_start.csv",
+    # "v2_docker_warm_arm64": "localstack-2.0.1-lambda-v2/test_invoke_warm_start_arm64/2023-04-13T11-17-31_test_invoke_warm_start.csv",
+    # "v2_host_cold_linux": "localstack-f61bb5b5-lambda-v2/test_invoke_cold_start_host_linux/2023-04-13T13-14-03_test_invoke_cold_start.csv",
+    # "v2_host_cold_arm64": "localstack-f61bb5b5-lambda-v2/test_invoke_cold_start_host_arm64/2023-04-13T15-24-51_test_invoke_cold_start.csv",
+    # "v2_docker_cold_postfix": "localstack-lambda-v2/test_invoke_cold_start_postfix/2023-05-04T15-05-34_test_invoke_cold_start.csv",
+    "v2.1.0_docker_cold": "localstack-2.1.0/test_invoke_cold_start_docker/2023-05-24T17-58-16_test_invoke_cold_start.csv",
+    "v2.1.0_docker_warm": "localstack-2.1.0/test_invoke_warm_start_docker/2023-05-24T17-48-10_test_invoke_warm_start.csv",
+    "v2.1.0_host_cold": "localstack-2.1.0/test_invoke_cold_start_host/2023-05-24T17-44-09_test_invoke_cold_start.csv",
+    "v2.1.0_host_warm": "localstack-2.1.0/test_invoke_warm_start_host/2023-05-24T17-33-29_test_invoke_warm_start.csv",
 }
 
 dfs = []
